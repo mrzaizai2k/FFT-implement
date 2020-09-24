@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.io import wavfile as wav
 
-from cooley-tukey-fast-fourier-transform-implentation import __version__
+from fourier_exp_000 import __version__
 
 __author__ = "Lisa Burton"
 __copyright__ = "Lisa Burton"

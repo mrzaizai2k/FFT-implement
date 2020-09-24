@@ -13,7 +13,7 @@ implementation of the Cooley-Tukey Fast Fourier Transform (FFT). The key differe
 git clone github.com/spacekitcat/<repository-name>
 cd <repository-name>
 python setup.py develop
-python src/cooley-tukey-fast-fourier-transform-implentation/discrete-fourier-transform.py resources/440hz.wav
+python src/cooley-tukey-fast-fourier-transform-implentation/fft.py resources/440hz.wav
 ```
 
 The graph below shows the frequency graph for an input wave file made up of a single 440hz sine wave.

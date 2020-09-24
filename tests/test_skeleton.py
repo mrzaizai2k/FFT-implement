@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from cooley-tukey-fast-fourier-transform-implentation.skeleton import fib
+from cooley-tukey-fast-fourier-transform.skeleton import fib
 
 __author__ = "Lisa Burton"
 __copyright__ = "Lisa Burton"
