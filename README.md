@@ -2,6 +2,8 @@
 
 *This is a toy FFT implementation. Numpy has a fantastic production quality implementation*
 
+Note: [Source code is here](https://github.com/spacekitcat/cooley-tukey-fast-fourier-transform/blob/master/src/fourier_exp_000/fft.py), sorry about all the boiler plate, I used some project generator and shouldn't have!
+
 Fourier transforms are really cool and I want to learn the maths and concepts behind it all. This continues from [fourier-exp-01](https://github.com/spacekitcat/fourier-exp-01), a small C program that performs a temporal to frequency domain transform. This is a port of the C program, Python seems to have a better selection of libraries for parsing wave files, drawing graphs and doing maths.
 
 This project includes a Python implementation of the Discrete Fourier Transform (DFT) in the C project above, it also contains an
