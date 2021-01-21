@@ -56,7 +56,7 @@ def setup_logging(loglevel):
     logging.basicConfig(level=loglevel, stream=sys.stdout,
                         format=logformat, datefmt="%Y-%m-%d %H:%M:%S")
 
-def my_fft(sample_set, constant):
+def my_fft(sample_set):
     if len(sample_set) == 1:
         return sample_set
 
@@ -64,8 +64,8 @@ def my_fft(sample_set, constant):
         print("{} must be a power of 2".format(len(sample_set)))
 
     size = len(sample_set)
-    even_fft = my_fft(sample_set[0::2], size)
-    odd_fft = my_fft(sample_set[1::2], size)
+    even_fft = my_fft(sample_set[0::2])
+    odd_fft = my_fft(sample_set[1::2])
 
     freq_bins = [0.0] * size
     for k in range(0, int(size / 2)):
