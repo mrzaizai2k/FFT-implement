@@ -110,7 +110,7 @@ def main(args):
     print("Closing {}".format(args.input_file))
 
     start = time.time()
-    freq_bins_my_fft = my_fft(sampleset, window_size)
+    freq_bins_my_fft = my_fft(sampleset)
     end = time.time()
     my_fft_time = round(end - start, 2)
 
