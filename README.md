@@ -22,7 +22,8 @@ python src/fourier_exp_000/fft.py resources/440hz.wav
 
 The graph below shows the frequency graph for an input wave file made up of a single 440hz sine wave.
 
-![A graph with the frequencies from 0hz to 20050hz plotted along the x-axis (the frequency domain) and the magnitude plotted along the y-axis (the amplitude or magnitude, i.e. the contribution this frequency makes to the signal). The graph spikes at 440hz, showing 440hz as the dominant frequency](docs/new_result.new_result.jpg)
+![A graph with the frequencies from 0hz to 20050hz plotted along the x-axis (the frequency domain) and the magnitude plotted along the y-axis (the amplitude or magnitude, i.e. the contribution this frequency makes to the signal). The graph spikes at 440hz, showing 440hz as the dominant frequency](docs/new_result.jpg)
+
 
 The graph below shows the frequency graph for an input wave file made up of a 500hz and a 1200hz sine wave.
 
