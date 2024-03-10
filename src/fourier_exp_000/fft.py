@@ -184,7 +184,7 @@ def main(args):
     my_dft_time = round(end - start, 5)
 
     fig, axs = plt.subplots(4, 1)
-    axs[0].set_title('My FFT (Cooley-Tukey) [time={}]'.format(normal_fft_time))
+    axs[0].set_title('Normal FFT (Cooley-Tukey) [time={}]'.format(normal_fft_time))
     axs[0].set_xlabel('Frequency (Hz)')
     axs[0].set_ylabel('Bin size')
     axs[0].plot(np.arange(22050), scale_for_graph(freq_bins_normal_fft[:len(freq_bins_normal_fft) // 2], 22050))
@@ -200,7 +200,7 @@ def main(args):
     axs[2].plot(np.arange(22050), scale_for_graph(freq_bins_my_dft[:len(freq_bins_numpy_fft) // 2], 22050))
 
 
-    axs[3].set_title('Normal FFT [time={}]'.format(memoi_fft_time))
+    axs[3].set_title('Memoi FFT [time={}]'.format(memoi_fft_time))
     axs[3].set_xlabel('Frequency (Hz)')
     axs[3].set_ylabel('Bin size')
     axs[3].plot(np.arange(22050), scale_for_graph(freq_bins_memoi_fft[:len(freq_bins_memoi_fft) // 2], 22050))
