@@ -39,7 +39,7 @@ This dynamic programming approach with memoization significantly improves the ef
 
 We use memoization to cache the `w = np.exp(-2j * np.pi * k / size)`
 
-The benchmark. We implement FFT to figure out the frequency of the sound wave. we compare the memoization FFT to the original FFT, FFT implemented by numpy and DFT
+The benchmark. We implement FFT to figure out the frequency of the sound wave. we compare the memoization FFT to the original FFT/, FFT implemented by numpy and DFT
 
 The graph below shows the frequency graph for an input wave file made up of a single 440hz sine wave.
 
@@ -50,7 +50,32 @@ As we can see the DFT has the lowest speed, the original FFT takes 0.017s to per
 However, The numpy took used 32880 bytes of memory, while memoization and original FFT used 16440 bytes of memory to perform
 
 
-- Investigate real-world applications of algorithms in various fields such as computer science, engineering, finance, and more to gain practical experience.
+- Investigate real-world applications of algorithms in various fields such as computer science, engineering, finance, and more to gain practical experience.1
 - Understand how the algorithm solves specific problems in these domains.
 - Study case examples where the algorithm has been used to solve complex problems.
-- Analyze the strategies and adaptations applied in these cases.
+- Analyze the strategies and adaptations applied in thesecases.
+
+# Discussion and Conclusion:
+
+1. Consider how advancements in the field could impact the algorithm’s future development.
+Advancements in hardware, such as the development of specialized processors like GPUs and TPUs, can significantly impact the future development of FFT algorithms.
+Further optimizations in FFT implementations tailored for specific hardware architectures can lead to even faster and more efficient computations.
+Research in numerical analysis and algorithmic improvements may lead to new FFT variants with improved accuracy, stability, and performance.
+Integration of FFT with emerging technologies like quantum computing could open up new possibilities for high-speed signal processing and data analysis.
+
+2. Compare the studied algorithm with other algorithms solving similar problems.
+FFT is often compared with other algorithms such as the Discrete Cosine Transform (DCT), Wavelet Transform, and Short-Time Fourier Transform (STFT), which are used for similar signal processing tasks.
+Each algorithm has its strengths and weaknesses depending on the specific application requirements.
+FFT is well-suited for transforming signals from the time domain to the frequency domain efficiently, making it ideal for tasks like spectral analysis, filtering, and compression.
+However, other algorithms like the Wavelet Transform offer advantages in handling non-stationary signals and providing better time-frequency localization.
+
+3. Analyze the pros and cons of different approaches.
+FFT:
+Pros: Efficient computation of spectral information, widely used in various applications, scalable for large datasets, numerous optimized implementations available.
+Cons: Limited to transforming data with a fixed length, may require additional processing for non-power-of-two input sizes, potential accuracy issues with certain implementations.
+Other Algorithms:
+Pros: Offer different trade-offs in terms of time-frequency localization, adaptability to non-stationary signals, and robustness to noise.
+Cons: Some algorithms may be computationally more expensive than FFT, may require more complex implementations, and may not be as widely supported in existing libraries and frameworks.
+
+4. Consider the ethical implications of the algorithm, mainly if it is used in sensitive or critical applications
+Tell the story about the original FFT. find bomb
