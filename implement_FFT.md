@@ -37,6 +37,13 @@ Memoization in FFT can be viewed as a form of dynamic programming, where the pro
 By applying memoization, FFT transforms from a purely recursive algorithm to a dynamic programming approach, where solutions to subproblems are reused to compute solutions to larger problems.
 This dynamic programming approach with memoization significantly improves the efficiency of FFT, especially for large input sizes, as it minimizes the computational overhead associated with repeated calculations.
 
+We use memoization to cache the `w = np.exp(-2j * np.pi * k / size)`
+
+The benchmark. We implement FFT to figure out the frequency of the sound wave. we compare the memoization FFT to the original FFT, FFT implemented by numpy and DFT
+
+The graph below shows the frequency graph for an input wave file made up of a single 440hz sine wave.
+
+![A graph with the frequencies from 0hz to 20050hz plotted along the x-axis (the frequency domain) and the magnitude plotted along the y-axis (the amplitude or magnitude, i.e. the contribution this frequency makes to the signal). The graph spikes at 440hz, showing 440hz as the dominant frequency](docs/new_result.jpg)
 
 - Investigate real-world applications of algorithms in various fields such as computer science, engineering, finance, and more to gain practical experience.
 - Understand how the algorithm solves specific problems in these domains.
