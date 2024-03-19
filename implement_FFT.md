@@ -45,6 +45,11 @@ The graph below shows the frequency graph for an input wave file made up of a si
 
 ![A graph with the frequencies from 0hz to 20050hz plotted along the x-axis (the frequency domain) and the magnitude plotted along the y-axis (the amplitude or magnitude, i.e. the contribution this frequency makes to the signal). The graph spikes at 440hz, showing 440hz as the dominant frequency](docs/new_result.jpg)
 
+As we can see the DFT has the lowest speed, the original FFT takes 0.017s to perform, my memoization version implemented it 10x faster. and the best speed is numpy FFT as it's written mainly in C language.
+
+However, The numpy took used 32880 bytes of memory, while memoization and original FFT used 16440 bytes of memory to perform
+
+
 - Investigate real-world applications of algorithms in various fields such as computer science, engineering, finance, and more to gain practical experience.
 - Understand how the algorithm solves specific problems in these domains.
 - Study case examples where the algorithm has been used to solve complex problems.
