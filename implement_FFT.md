@@ -64,18 +64,40 @@ Research in numerical analysis and algorithmic improvements may lead to new FFT 
 Integration of FFT with emerging technologies like quantum computing could open up new possibilities for high-speed signal processing and data analysis.
 
 2. Compare the studied algorithm with other algorithms solving similar problems.
+
+compare: signal processing, image compressing, multiply 2 matrices
+
 FFT is often compared with other algorithms such as the Discrete Cosine Transform (DCT), Wavelet Transform, and Short-Time Fourier Transform (STFT), which are used for similar signal processing tasks.
 Each algorithm has its strengths and weaknesses depending on the specific application requirements.
 FFT is well-suited for transforming signals from the time domain to the frequency domain efficiently, making it ideal for tasks like spectral analysis, filtering, and compression.
 However, other algorithms like the Wavelet Transform offer advantages in handling non-stationary signals and providing better time-frequency localization.
 
-3. Analyze the pros and cons of different approaches.
-FFT:
-Pros: Efficient computation of spectral information, widely used in various applications, scalable for large datasets, numerous optimized implementations available.
-Cons: Limited to transforming data with a fixed length, may require additional processing for non-power-of-two input sizes, potential accuracy issues with certain implementations.
-Other Algorithms:
-Pros: Offer different trade-offs in terms of time-frequency localization, adaptability to non-stationary signals, and robustness to noise.
-Cons: Some algorithms may be computationally more expensive than FFT, may require more complex implementations, and may not be as widely supported in existing libraries and frameworks.
+4. Analyze the pros and cons of different approaches.
 
-4. Consider the ethical implications of the algorithm, mainly if it is used in sensitive or critical applications
+In the realm of signal processing, the Discrete Fourier Transform (DFT) and its efficient counterpart, the Fast Fourier Transform (FFT), are fundamental tools for analyzing and extracting frequency information from signals. The DFT provides an exact representation of a signal's frequency content by decomposing it into its constituent sinusoids. Its mathematical clarity makes it a valuable tool for theoretical analysis and educational purposes. However, the direct computation of the DFT entails a computational complexity of ON^2
+N is the length of the input signal. This complexity becomes impractical for large signal sizes, limiting its applicability in real-time processing scenarios where efficiency is crucial.
+
+In contrast, the FFT algorithm revolutionized signal processing by significantly reducing the computational complexity of the DFT from 
+ON^2 to O(NlogN). This efficiency makes the FFT well-suited for real-time signal processing applications, such as audio and image processing, where rapid computation of frequency spectra is paramount. Furthermore, FFT implementations often employ efficient numerical techniques to maintain numerical stability and accuracy during computation, ensuring reliable results.
+
+However, the FFT has its limitations. Some FFT implementations require the input signal size to be a power of 2 or a product of small primes, restricting its applicability for signals with arbitrary lengths. Additionally, FFT's frequency resolution is inherently tied to the sampling rate and the number of points in the input signal, which may not be optimal for all applications, particularly when dealing with narrowband signals or closely spaced frequency components. Furthermore, while the FFT efficiently computes the forward transform, computing the inverse transform (IFFT) may involve additional considerations, such as scaling factors and computational overhead.
+
+In conclusion, while the DFT offers an exact representation of a signal's frequency content, it suffers from computational complexity issues, especially for large signal sizes. The FFT addresses these concerns by significantly reducing computational complexity, making it practical for real-time signal processing applications.
+
+When comparing the Fast Fourier Transform (FFT) with the conventional method of multiplying two matrices directly, it's crucial to consider various factors, including computational efficiency, implementation complexity, and applicability across different scenarios.
+
+FFT-based matrix multiplication offers significant advantages in terms of computational speed, especially for large matrices. By exploiting the efficient FFT algorithm, matrix multiplication can be performed in O(NlogN) time complexity, where 
+N is the size of the matrices. This efficiency stems from the inherent parallelism and divide-and-conquer nature of the FFT algorithm, which enables faster computation by leveraging the properties of complex exponentials.
+
+Furthermore, FFT-based multiplication is well-suited for certain types of matrices, such as those with a special structure (e.g., Toeplitz matrices) or when dealing with periodic signals. In these cases, FFT-based methods can yield substantial performance improvements over conventional approaches.
+
+However, FFT-based matrix multiplication comes with its own set of challenges. Preprocessing steps, such as padding matrices to the nearest power of two or handling non-square matrices, may introduce additional overhead, particularly for small matrix sizes. Moreover, while FFT-based methods are generally accurate, numerical errors can accumulate, leading to potential loss of precision, especially in scenarios involving large-scale computations or ill-conditioned matrices.
+
+On the other hand, direct matrix multiplication follows a straightforward algorithmic approach, making it easier to implement and understand compared to FFT-based methods. By traversing the rows and columns of the matrices and computing the dot product of corresponding elements, direct multiplication preserves numerical precision without the need for additional preprocessing steps.
+
+However, the computational complexity of direct matrix multiplication is O(n^3) where
+n is the size of the matrices. This cubic time complexity makes direct multiplication less efficient for large-scale operations compared to FFT-based methods. Additionally, direct multiplication may not fully exploit parallel computing architectures, leading to suboptimal performance on parallel processing units.
+
+
+6. Consider the ethical implications of the algorithm, mainly if it is used in sensitive or critical applications
 Tell the story about the original FFT. find bomb
