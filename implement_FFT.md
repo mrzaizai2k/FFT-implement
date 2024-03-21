@@ -65,13 +65,6 @@ Integration of FFT with emerging technologies like quantum computing could open 
 
 2. Compare the studied algorithm with other algorithms solving similar problems.
 
-compare: signal processing, image compressing, multiply 2 matrices
-
-FFT is often compared with other algorithms such as the Discrete Cosine Transform (DCT), Wavelet Transform, and Short-Time Fourier Transform (STFT), which are used for similar signal processing tasks.
-Each algorithm has its strengths and weaknesses depending on the specific application requirements.
-FFT is well-suited for transforming signals from the time domain to the frequency domain efficiently, making it ideal for tasks like spectral analysis, filtering, and compression.
-However, other algorithms like the Wavelet Transform offer advantages in handling non-stationary signals and providing better time-frequency localization.
-
 4. Analyze the pros and cons of different approaches.
 
 In the realm of signal processing, the Discrete Fourier Transform (DFT) and its efficient counterpart, the Fast Fourier Transform (FFT), are fundamental tools for analyzing and extracting frequency information from signals. The DFT provides an exact representation of a signal's frequency content by decomposing it into its constituent sinusoids. Its mathematical clarity makes it a valuable tool for theoretical analysis and educational purposes. However, the direct computation of the DFT entails a computational complexity of ON^2
@@ -100,4 +93,8 @@ n is the size of the matrices. This cubic time complexity makes direct multiplic
 
 
 6. Consider the ethical implications of the algorithm, mainly if it is used in sensitive or critical applications
-Tell the story about the original FFT. find bomb
+When considering the ethical implications of using the Fast Fourier Transform (FFT) or any signal processing technique for anonymously listening to the information of others, several key ethical considerations come to the forefront.
+
+Privacy is paramount. Utilizing FFT or similar methods to intercept or eavesdrop on conversations or private communications without the explicit consent of all parties involved violates individuals' rights to privacy. Privacy is a fundamental human right, recognized globally, and any infringement upon it without proper consent is ethically unacceptable.
+
+If the encrypted message is being intercepted and analyzed without the consent of the parties involved, it could constitute an invasion of privacy and violate individuals' rights to confidentiality. In many jurisdictions, intercepting and decrypting private communications without proper authorization or legal authority is illegal and unethical. Therefore, any use of FFT or similar techniques in this context should be undertaken with strict adherence to privacy laws and ethical guidelines.
