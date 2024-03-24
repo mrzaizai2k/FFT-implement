@@ -182,25 +182,28 @@ def main(args):
     freq_bins_my_dft = scale_for_graph(discrete_fourier_transform(sampleset, window_size), window_size)
     end = time.time()
     my_dft_time = round(end - start, 5)
+    my_dft_memory = sys.getsizeof(freq_bins_my_dft)
+    print(f"dft took {my_dft_time} seconds and used {my_dft_memory} bytes of memory")
+
 
     fig, axs = plt.subplots(4, 1)
-    axs[0].set_title('Normal FFT (Cooley-Tukey) [time={}]'.format(normal_fft_time))
+    axs[0].set_title('Normal FFT (Cooley-Tukey) [time (s)={}, memory (bytes)={}]'.format(normal_fft_time, normal_fft_memory))
     axs[0].set_xlabel('Frequency (Hz)')
     axs[0].set_ylabel('Bin size')
     axs[0].plot(np.arange(22050), scale_for_graph(freq_bins_normal_fft[:len(freq_bins_normal_fft) // 2], 22050))
     
-    axs[1].set_title('Numpy FFT [time={}]'.format(np_fft_time))
+    axs[1].set_title('Numpy FFT [time (s)={}, memory (bytes)={}]'.format(np_fft_time, numpy_fft_memory))
     axs[1].set_xlabel('Frequency (Hz)')
     axs[1].set_ylabel('Bin size')
     axs[1].plot(np.arange(22050), scale_for_graph(freq_bins_numpy_fft[:len(freq_bins_numpy_fft) // 2], 22050))
     
-    axs[2].set_title('My DFT (Brute force) [time={}]'.format(my_dft_time))
+    axs[2].set_title('My DFT (Brute force) [time (s)={}, memory (bytes)={}]'.format(my_dft_time, my_dft_memory))
     axs[2].set_xlabel('Frequency (Hz)')
     axs[2].set_ylabel('Bin size')
     axs[2].plot(np.arange(22050), scale_for_graph(freq_bins_my_dft[:len(freq_bins_numpy_fft) // 2], 22050))
 
 
-    axs[3].set_title('Memoi FFT [time={}]'.format(memoi_fft_time))
+    axs[3].set_title('Memoi FFT [time (s)={}, memory (bytes)={}]'.format(memoi_fft_time, memoi_fft_memory))
     axs[3].set_xlabel('Frequency (Hz)')
     axs[3].set_ylabel('Bin size')
     axs[3].plot(np.arange(22050), scale_for_graph(freq_bins_memoi_fft[:len(freq_bins_memoi_fft) // 2], 22050))
